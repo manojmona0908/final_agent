@@ -1,0 +1,6 @@
+Pillow
+PyMuPDF
+beautifulsoup4
+markdown
+ollama
+python-docx
