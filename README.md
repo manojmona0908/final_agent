@@ -103,10 +103,11 @@ ollama pull gemma3:4b  # Secondary/fallback validation model
 
 ## How to Run the Pipeline
 
-1. **Add Documents:** Place the documents you want to process inside the `input_files/` directory. Supported formats include `.pdf`, `.png`, `.jpg`, `.jpeg`, and `.docx`.
-2. **Execute:** Run the main pipeline script from the root of the repository:
+1. **Add Documents:** Place the documents you want to process inside the `final_agent/input_files/` directory. Supported formats include `.pdf`, `.png`, `.jpg`, `.jpeg`, and `.docx`.
+2. **Execute:** Because the project uses relative Python imports, it must be run as a module from the parent directory. If you are currently inside `final_agent`, move up one directory and execute:
    ```bash
-   python main.py
+   cd ..
+   python -m final_agent.main
    ```
 3. **Monitor:** The script will output logging information to the console, detailing the extraction strategy per page, memory fusion events, and OCR progression.
 
